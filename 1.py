@@ -1,31 +1,29 @@
 """
-1) Observe o trecho de código abaixo:
+1) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores 
+anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado 
+um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a 
+sequência.
 
- 	int INDICE = 13, SOMA = 0, K = 0;
+IMPORTANTE:
 
- 	enquanto K < INDICE faça
-
-	{
-
-		K = K + 1;
-
-		SOMA = SOMA + K;
-
-	}
-
- 	imprimir(SOMA);
-
-Ao final do processamento, qual será o valor da variável SOMA?
+    Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
 """
 
-indice = 13
-soma = 0
-k = 0
 
-while k < indice:
-    k += 1
-    soma += k
+def fibonacci(num):
+    a = 0
+    b = 1
 
-print(soma)
+    while b < num:
+        temp = a + b
+        a = b
+        b = temp
 
-# O valor da variável soma é 91
+    if num == b:
+        print("O número pertence a sequência")
+    else:
+        print("O número não pertence a sequência")
+
+
+num_input = int(input())
+fibonacci(num_input)

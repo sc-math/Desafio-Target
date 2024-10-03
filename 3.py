@@ -1,16 +1,31 @@
 """
-3) Descubra a lógica e complete o próximo elemento:  
+3) Observe o trecho de código abaixo:
 
-a) 1, 3, 5, 7, ___  -> 9
+ 	int INDICE = 12, SOMA = 0, K = 1;
 
-b) 2, 4, 8, 16, 32, 64, ____ -> 128
+ 	enquanto K < INDICE faça
 
-c) 0, 1, 4, 9, 16, 25, 36, ____ -> 7*7 = 49
+	{
 
-d) 4, 16, 36, 64, ____ -> 4*n^2 -> 4*5^2 = 4*25 = 125
+		K = K + 1;
 
-e) 1, 1, 2, 3, 5, 8, ____ -> 13
+		SOMA = SOMA + K;
 
-f) 2,10, 12, 16, 17, 18, 19, ____ -> 200
+	}
 
+ 	imprimir(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
 """
+
+indice = 12
+soma = 0
+k = 1
+
+while k < indice:
+    k += 1
+    soma += k
+
+print(soma)
+
+# O valor da variável soma é 77
